@@ -1,0 +1,70 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/11/2021 8:38:35 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-3MOFGAO9"
+  DTS:CreatorName="LAPTOP-3MOFGAO9\Ahmad"
+  DTS:DTSID="{D9E440B3-FBE7-44AB-9C1A-345B54C34903}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.157"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{4A58BE39-C900-4DAE-A7F1-3189AC8512EE}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-3MOFGAO9.ssisgayangin]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{50537248-C727-4F14-926E-2000EF833113}"
+      DTS:ObjectName="LAPTOP-3MOFGAO9.ssisgayangin">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-3MOFGAO9;Initial Catalog=ssisgayangin;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{BE0CCED4-7A4C-4819-A5A2-F26F6C4EBB57}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{50537248-C727-4F14-926E-2000EF833113}"
+          SQLTask:SqlStatementSource="Declare @id int&#xA;insert into dbo.LogSPExecution( SPName,StartTime)&#xA;values ('dbo.usp_SP1',getdate())&#xA;&#xA;Select @id=SCOPE_IDENTITY()&#xA;EXEC dbo.usp_SP1&#xA;&#xA;update dbo.LogSPExecution&#xA;set EndTime=getdate()&#xA;where id=@id&#xA;&#xA;go&#xA;&#xA;Declare @id int&#xA;insert into dbo.LogSPExecution( SPName,StartTime)&#xA;values ('dbo.usp_SP2',getdate())&#xA;&#xA;Select @id=SCOPE_IDENTITY()&#xA;EXEC dbo.usp_SP2&#xA;&#xA;update dbo.LogSPExecution&#xA;set EndTime=getdate()&#xA;where id=@id&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="337.499986588955,51.1333337397046" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
