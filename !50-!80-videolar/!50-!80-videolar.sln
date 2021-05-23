@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "!50-!80-videolar", "!50-!80-videolar\!50-!80-videolar.dtproj", "{A081A5CC-F4D1-43B1-8990-B74A0737912E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A081A5CC-F4D1-43B1-8990-B74A0737912E}.Development|Default.ActiveCfg = Development
+		{A081A5CC-F4D1-43B1-8990-B74A0737912E}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25695C65-AC7D-4AE0-9191-436CA6FDE7BC}
+	EndGlobalSection
+EndGlobal
